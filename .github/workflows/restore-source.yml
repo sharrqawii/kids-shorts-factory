@@ -1,0 +1,52 @@
+name: Restore verified source package once
+on:
+  workflow_dispatch:
+    inputs:
+      sha256:
+        description: SHA256 of the reviewed studio-source.zip release asset
+        required: true
+        type: string
+permissions:
+  contents: write
+jobs:
+  restore:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Refuse to replace an existing source tree
+        run: test ! -e studio/server.py && test ! -e factory/render.py
+      - name: Download and verify the reviewed source package
+        env:
+          EXPECTED_SHA256: ${{ inputs.sha256 }}
+        run: |
+          curl --fail --location --max-time 120 --output /tmp/studio-source.zip https://github.com/sharrqawii/kids-shorts-factory/releases/download/studio-phase-2/studio-source.zip
+          python - <<'PY'
+          import hashlib, json, os, pathlib, zipfile
+          archive = pathlib.Path('/tmp/studio-source.zip')
+          expected = os.environ['EXPECTED_SHA256']
+          assert len(expected) == 64 and all(c in '0123456789abcdef' for c in expected)
+          assert hashlib.sha256(archive.read_bytes()).hexdigest() == expected
+          with zipfile.ZipFile(archive) as z:
+              manifest = json.loads(z.read('MANIFEST.json'))
+              assert len(manifest) < 200
+              for name, digest in manifest.items():
+                  p = pathlib.PurePosixPath(name)
+                  assert not p.is_absolute() and '..' not in p.parts and '\\' not in name
+                  assert p.parts[0] != '.git'
+                  content = z.read(name)
+                  assert hashlib.sha256(content).hexdigest() == digest
+                  if name.startswith('.github/workflows/'):
+                      continue
+                  dest = pathlib.Path(name)
+                  dest.parent.mkdir(parents=True, exist_ok=True)
+                  dest.write_bytes(content)
+          PY
+      - name: Commit the recovered source files
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add .
+          git commit -m 'Preserve Pip factory and add optional WanGP video studio'
+          git push origin HEAD:main
