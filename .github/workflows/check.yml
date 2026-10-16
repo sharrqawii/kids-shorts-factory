@@ -1,0 +1,45 @@
+name: Check source and render smoke tests
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: check-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  check:
+    # Job-level guard runs before a VM is allocated. No private-repo minutes.
+    if: github.event.repository.private == false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      OMP_NUM_THREADS: '4'
+      OPENBLAS_NUM_THREADS: '4'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.11'
+      - name: Install free CPU dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg libxi6 libxrender1 libxfixes3 libxkbcommon0 libgl1 libegl1 libsm6
+          python -m pip install --no-cache-dir -r requirements-dev.txt
+      - name: Unit tests and Python syntax
+        run: |
+          python -m compileall -q factory studio tests
+          python -m unittest discover -s tests -v
+      - name: Real Blender CPU smoke render
+        run: python -m factory.render --mode economy --smoke --out build/blender-smoke --budget-seconds 600
+      - name: Portable fallback smoke render
+        run: python -m factory.render --mode fallback --smoke --out build/fallback-smoke
+      - name: Verify automatic recovery from a native renderer failure
+        run: python -m scripts.check_auto_fallback
+      - name: Write verification summary
+        if: always()
+        run: python scripts/job_summary.py
