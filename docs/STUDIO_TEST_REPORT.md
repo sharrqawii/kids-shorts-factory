@@ -1,6 +1,6 @@
-# Studio verification — 13 October 2026
+# Studio verification — local tests 13 October; GitHub checks 16 October 2026
 
-This report distinguishes the proven Blender video from mocked WanGP integration tests. See `TEST_REPORT.md` at the repository root for the original Phase 1 evidence.
+This report distinguishes genuine Blender and local WanGP videos from mocked integration tests. See `TEST_REPORT.md` at the repository root for the original Phase 1 evidence.
 
 ## Verified locally
 
@@ -29,6 +29,29 @@ Other models, image-to-video inference, production-length WanGP videos, free clo
 
 ## GitHub status
 
-The GitHub connector is authenticated to a different account and has no push permission on `sharrqawii/kids-shorts-factory`. A noninteractive Git push dry-run also failed due to missing authentication. The existing browser session does have repository-owner access. Source transfer through that session and a real Actions run are being verified separately; local tests above do not establish a cloud pass.
+**Source recovery and real GitHub CPU checks succeeded on 16 October 2026.** The existing browser-owner session transferred the reviewed archives and workflows, and the public CPU recovery job committed the source. All 62 tracked source files matched the local project after recovery. The existing GitHub initialization and recovered Blender history were also merged locally and preserved in the bundled Git history.
+
+- [Recovery run 38865498691](https://github.com/sharrqawii/kids-shorts-factory/actions/runs/38865498691): success, 15 seconds overall.
+- [CPU check run 38865655080](https://github.com/sharrqawii/kids-shorts-factory/actions/runs/38865655080): success, job 1 minute 26 seconds, commit `a731a30bd25457f7408309fe4f160de0f4e6907f`.
+- Cloud logs confirm 39 tests passed in 4.324 seconds, all 24 Blender smoke frames completed, and full video decoding passed. Portable fallback and simulated native-renderer-failure recovery also passed. These legacy fallback tests do not enable engine switching in Studio.
+- Public downloads of both local videos and the source transfer archive were read back without authentication and their SHA256 hashes matched exactly.
+- GitHub reported a Node 20 deprecation warning for pinned actions; it ran them on Node 24 successfully. No check failed.
+
+## Complete cloud episode: verified
+
+The manually dispatched [full render run 38865913633](https://github.com/sharrqawii/kids-shorts-factory/actions/runs/38865913633) succeeded on the standard public `ubuntu-24.04` CPU runner. Total workflow duration was 9 minutes 21 seconds; the render job was 9 minutes 16 seconds; generation and verification took 502.242 seconds. This proves the sample can be generated without the PC running.
+
+- Blender 4.2.23 LTS / Cycles CPU, four threads, economy mode explicitly selected; no fallback or GPU used.
+- All 240 animation frames rendered at 540×960, 12 distinct poses per second; Lanczos upscaling to 1080×1920 and 24 delivery frames per second. Native-resolution titles; original synthesized music and sound effects.
+- MP4: 20 seconds, 1080×1920, H.264/yuv420p, 480 delivery frames, AAC stereo at 48 kHz; 2,271,858 bytes.
+- All ten verification checks passed in the cloud. The public MP4 was downloaded without authentication, its SHA256 matched, and an independent local full FFmpeg decode plus all ten factory checks passed again.
+- SHA256: `2f05808b80478061f26548acb7c7a228a23a2cb7187427fcc9a6f86bffb2835e`.
+- [Download the cloud MP4](https://github.com/sharrqawii/kids-shorts-factory/releases/download/episode-38865913633-1/pip-and-the-giant-strawberry.mp4) · [release and reports](https://github.com/sharrqawii/kids-shorts-factory/releases/tag/episode-38865913633-1) · [sanitized evidence](evidence/github-full-render.json).
+
+Native 1080×1920 Blender rendering has not been benchmarked end to end. The successful economy sample is upscaled. This single run does not demonstrate five new stories per day or continuous service availability. The cloud render did not test WanGP; that verified GPU test remains local only.
+
+## Repository transfer details
+
+The connector remains read-only for this repository and noninteractive Git authentication was unavailable. The browser-based transfer completed the authorized repository work without creating credentials or exposing private configuration.
 
 The manual `restore-source.yml` workflow is a one-time recovery mechanism: it checks a reviewed archive's SHA256, validates every extracted source checksum and refuses to replace an existing factory/Studio source tree. It cannot restore workflow files using its token; those are transferred separately. It has no schedule and uses the standard public Linux CPU runner. Complete local source and the original render remain available in the delivery ZIP regardless of the remote transfer result.
