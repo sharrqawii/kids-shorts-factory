@@ -1,4 +1,4 @@
-# kids-shorts-factory — Phase 1
+# kids-shorts-factory — Pip Studio
 
 **New: Pip Studio adds Kids Factory + Creator Studio.** Open the lightweight
 browser app with `Start-Studio.cmd` on Windows, or follow
@@ -13,11 +13,18 @@ strawberry in a pastel garden**. Everything is built from source: geometry,
 animation, music, and sound effects. No paid API, account secret, GPU service,
 or YouTube integration is needed by the renderer.
 
-**A full sample has been rendered and verified locally.** In the completed
+**The complete episode has been rendered and verified both locally and on a
+free GitHub CPU runner.** [Download the cloud-rendered MP4](https://github.com/sharrqawii/kids-shorts-factory/releases/download/episode-38865913633-1/pip-and-the-giant-strawberry.mp4).
+[The full cloud run](https://github.com/sharrqawii/kids-shorts-factory/actions/runs/38865913633)
+succeeded in 9 minutes 21 seconds overall; video generation took 502.2 seconds.
+All 240 Blender frames completed and full MP4 decoding passed. In the completed
 project ZIP, open `sample/pip-and-the-giant-strawberry.mp4`. The same folder
 contains the editable Blender scene, original audio, and measured render report.
-GitHub execution remains unverified because the requested repository could not
-be accessed. Details and the exact limitations are in [TEST_REPORT.md](TEST_REPORT.md).
+The original Phase 1 evidence is preserved in [TEST_REPORT.md](TEST_REPORT.md).
+The expanded project is now committed to the existing repository, and
+[the free GitHub CPU checks passed](https://github.com/sharrqawii/kids-shorts-factory/actions/runs/38865655080),
+including all 39 tests and a real Blender smoke render. Download the complete
+project and both verified local videos from [the Studio release](https://github.com/sharrqawii/kids-shorts-factory/releases/tag/studio-phase-2).
 
 The final file is **20 seconds, 1080 × 1920, H.264 MP4, 24 fps, AAC stereo at
 48 kHz**. Pip walks in, notices the berry, leans in for a gentle boop, watches
@@ -25,10 +32,10 @@ it wobble, hops with delight, and settles beside it under a floating heart.
 
 ## Start here — no coding needed
 
-Once this repository is available on GitHub as a **public** repository:
+In this **public** GitHub repository:
 
 1. Open **Actions → Render Pip episode → Run workflow**.
-2. Keep **auto** selected and press **Run workflow**.
+2. Select **economy** for the proven Blender CPU mode and press **Run workflow**.
 3. Wait for the run to finish. Your PC can be switched off after starting it.
 4. Open the repository's **Releases** page. Open the new **Pip episode build**.
 5. Download `pip-and-the-giant-strawberry.mp4`. The accompanying JSON report
@@ -40,7 +47,9 @@ repositories before allocating a runner. Nothing uploads to YouTube.
 
 **Phase 1 is a render proof and software test, not an unattended channel.**
 There is no recurring schedule, publishing integration, or paid service.
-See [TEST_REPORT.md](TEST_REPORT.md) for what was actually run in this build.
+See [the current verification report](docs/STUDIO_TEST_REPORT.md) for the local
+WanGP test and completed cloud render; [TEST_REPORT.md](TEST_REPORT.md) preserves
+the original Phase 1 record.
 
 The next-phase [five-per-day architecture](docs/FIVE_PER_DAY.md) includes a
 disabled production configuration, five original story concepts, and a tested
