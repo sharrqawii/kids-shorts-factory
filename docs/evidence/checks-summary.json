@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-13",
+  "unit_tests": {
+    "passed": 17,
+    "command": "python -m unittest discover -s tests -v",
+    "failed": 0
+  },
+  "syntax_check": {
+    "result": "pass",
+    "command": "python -m compileall -q factory tests scripts"
+  },
+  "workflow_lint": {
+    "version": "1.7.12",
+    "tool": "actionlint",
+    "files": [
+      ".github/workflows/check.yml",
+      ".github/workflows/render.yml"
+    ],
+    "errors": 0,
+    "pyflakes": "not installed; disabled for this local check",
+    "shellcheck": "not installed; disabled for this local check"
+  }
+}

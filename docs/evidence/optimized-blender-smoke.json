@@ -1,0 +1,89 @@
+{
+  "requested_mode": "economy",
+  "smoke": true,
+  "duration": 2,
+  "animation_fps": 12,
+  "delivery_fps": 24,
+  "output_resolution": [
+    1080,
+    1920
+  ],
+  "fallback_reasons": [],
+  "render": {
+    "engine": "Blender Cycles CPU",
+    "blender": "4.2.23 LTS",
+    "width": 540,
+    "height": 960,
+    "samples": 4,
+    "threads": 4,
+    "denoising_prefilter": "FAST",
+    "denoising_quality": "BALANCED",
+    "denoising_gpu": false,
+    "frames_done": 24,
+    "frame_seconds": [
+      8.907000000000153,
+      7.811999999999898,
+      7.188000000000102,
+      7.25,
+      6.860000000000582,
+      3.280999999999949,
+      3.0,
+      3.561999999999898,
+      3.688000000000102,
+      3.344000000000051,
+      3.0,
+      3.375,
+      3.764999999999418,
+      3.0,
+      3.280999999999949,
+      3.405999999999949,
+      3.0789999999997235,
+      3.3280000000004293,
+      3.20299999999952,
+      3.2650000000003274,
+      3.1099999999996726,
+      3.3280000000004293,
+      3.20299999999952,
+      2.79700000000048
+    ],
+    "elapsed_seconds": 114.15599999999995
+  },
+  "audio": {
+    "sample_rate": 48000,
+    "channels": 2,
+    "duration": 2,
+    "peak_dbfs": -16.43253510115086,
+    "rms_dbfs": -30.273868234914186,
+    "source": "Original deterministic synthesis; assets licensed CC0-1.0"
+  },
+  "verification": {
+    "resolution": true,
+    "h264": true,
+    "yuv420p": true,
+    "duration": true,
+    "fps": true,
+    "frame_count": true,
+    "aac": true,
+    "stereo_48khz": true,
+    "audio_duration": true,
+    "full_decode": true
+  },
+  "actual_mode": "economy",
+  "render_resolution": [
+    540,
+    960
+  ],
+  "note": "12 distinct animation poses per second, each held for two delivery frames. Blender renders at 540x960, Lanczos-upscaled to 1080x1920. Titles are native 1080p.",
+  "elapsed_seconds": 128.23399999999947,
+  "video_bytes": 317360,
+  "sha256": "810353e610ccdd61469f712836fa8b02eeb419804c46c0c0f58e491fc51b3b00",
+  "environment": {
+    "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+    "platform": "win32",
+    "threads": 4
+  },
+  "inputs": {
+    "assets\\pip.json": "7dd88b5688b91c89775e6696ee79c75865871b762a27fea4f3b0c42f9460bc40",
+    "episodes\\strawberry.json": "7550fe4244cbf2cb573dbc900f758122f360ca02632c1eb051a6e8ee862834cb"
+  }
+}

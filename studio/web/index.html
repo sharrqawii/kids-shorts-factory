@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Pip Studio · Make a little wonder</title><link rel="stylesheet" href="/style.css"><script defer src="/app.js"></script></head>
+<body>
+<aside class="sidebar">
+  <a class="brand" href="/" aria-label="Pip Studio home"><span class="brand-icon">p.</span><span>pip<span class="brand-light">studio</span><small>A LITTLE IMAGINATION GOES FAR</small></span></a>
+  <div class="nav-label">YOUR WORKSPACES</div>
+  <nav aria-label="Workspaces"><button id="kids-tab" class="nav-button active" aria-pressed="true"><span>✿</span> Kids Factory <span class="arrow">↗</span></button><button id="creator-tab" class="nav-button" aria-pressed="false"><span>◈</span> Creator Studio <span class="arrow">↗</span></button></nav>
+  <div class="sidebar-note"><span class="little-dot"></span> Your ideas. Your files.<p>Original stories and creative experiments, in one place.</p></div>
+  <div class="budget"><span>SPENDING LIMIT</span><strong>$0<span> / always</span></strong><p>No paid provisioning.<br>No automatic publishing.</p></div>
+</aside>
+<main>
+  <header><span id="breadcrumb">Workspace / Kids Factory</span><span class="local-badge"><i></i> Personal studio</span></header>
+  <section class="intro"><div><div class="eyebrow" id="eyebrow">SMALL CHARACTER. BIG ADVENTURES.</div><h1 id="title">Make a little wonder.</h1><p id="subtitle">A familiar face. A fresh discovery. A story worth sharing.</p></div><span class="chapter" id="chapter">01 / KIDS</span></section>
+  <section class="workspace-grid">
+    <article class="feature-card" id="kids-feature"><div class="poster"><img src="/pip.jpg" alt="Pip the baby capybara beside a giant strawberry in a colorful 3D garden"><span class="verified-tag">● VERIFIED BLENDER ANIMATION</span><div class="poster-caption"><span>MEET YOUR LITTLE EXPLORER</span><h2>Pip & the<br>giant strawberry</h2><p>One very curious capybara. One very big surprise.</p></div></div><div class="feature-footer"><div><strong>Episode 001</strong><span>20 seconds · 9:16 · Original audio</span></div><button id="watch" class="button secondary">Watch episode ↗</button></div></article>
+    <article class="creator-feature hidden" id="creator-feature"><div class="creative-art"><span class="orbit orbit-one"></span><span class="orbit orbit-two"></span><div class="glass-object"></div><span class="art-label">YOUR NEXT FRAME<br>STARTS WITH AN IDEA.</span><span class="art-caption">STUDIO STUDY / CSS ARTWORK · NOT GENERATED VIDEO</span></div><div class="creator-copy"><span class="eyebrow">POWERED BY WANGP</span><h2>From a spark<br>to a scene.</h2><p>Explore cinematic shots, product stories and social clips with text or a reference image.</p><div class="tags"><span>Cinematic</span><span>Product stories</span><span>Social video</span></div></div></article>
+    <section class="composer"><div class="card-heading"><div><span class="eyebrow">LET’S MAKE SOMETHING</span><h2 id="composer-title">Set the scene</h2></div><span class="small-star">✳</span></div>
+      <form id="job-form">
+        <label for="engine">Generation engine</label><select id="engine" required><option value="">Choose an engine…</option><option value="blender">Blender · free CPU animation</option><option value="wangp">WanGP · generative AI video</option></select>
+        <div id="blender-fields" class="hidden"><div class="inline-note">Pip’s character, garden, story and original soundtrack stay consistent. This template has a fixed 20-second story.</div><label for="quality">Render quality</label><select id="quality"><option value="economy">CPU economy · 540p → 1080 × 1920</option><option value="blender">Native · 1080 × 1920 (slower)</option></select><div class="character-chip"><span>✿</span><div><strong>Pip · character v1</strong><small>Caramel fur / mint scarf / flower pin</small></div></div></div>
+        <div id="wangp-fields" class="hidden">
+          <div class="two-fields"><div><label for="model">Model</label><select id="model"></select></div><div><label for="provider">GPU location</label><select id="provider"><option value="local">Local GPU</option><option value="free-cloud">Free cloud bridge</option></select></div></div>
+          <div class="two-fields"><div><label for="mode">Start with</label><select id="mode"><option value="text">Text prompt</option><option value="image">Reference image</option></select></div><div><label for="resolution">Resolution</label><select id="resolution"></select></div></div>
+          <label for="prompt">Describe your scene</label><textarea id="prompt" maxlength="4000" rows="4" placeholder="A tiny capybara discovers a glowing strawberry in a pastel garden. Gentle camera push, playful expression, warm morning light."></textarea>
+          <div id="reference-field" class="hidden"><label for="reference">Reference image · PNG or JPEG</label><input type="file" id="reference" accept="image/png,image/jpeg"><p class="help" id="reference-status">Up to 8 MB. Use an image you have permission to use.</p></div>
+          <div class="two-fields"><div><label for="duration">Duration</label><select id="duration"><option value="2">2 seconds · GPU test</option><option value="4" selected>4 seconds</option><option value="8">8 seconds</option><option value="12">12 seconds</option><option value="20">20 seconds</option></select></div><div><label for="seed">Seed</label><input id="seed" type="number" min="0" max="2147483647" value="42"></div></div>
+          <details><summary>Fine-tune the generation</summary><label for="steps">Inference steps (1–60)</label><input id="steps" type="number" min="1" max="60" value="30"><label for="negative">Avoid in the scene</label><textarea id="negative" rows="2" maxlength="2000" placeholder="Optional negative prompt"></textarea></details>
+        </div>
+        <p id="engine-status" class="status-note" role="status">Choose Blender for the proven Pip episode, or WanGP for a new AI scene.</p>
+        <button id="submit" class="button primary" type="submit">Add to render queue <span>↗</span></button><p class="form-footnote">You choose the engine. Nothing publishes automatically.</p>
+        <p id="form-message" class="form-message" role="alert"></p>
+      </form>
+    </section>
+  </section>
+  <section class="queue-section"><div class="section-heading"><div><span class="eyebrow">YOUR CREATIVE TRAIL</span><h2>Queue & recent creations <span id="job-count">0</span></h2></div><span class="queue-policy">One job at a time · Saved on this studio</span></div><div id="jobs" aria-live="polite"></div></section>
+  <section class="notes-grid"><article><span>01</span><h3>Familiar characters</h3><p id="note-one">Pip’s reusable Blender design is preserved. AI reference images guide a likeness; they cannot guarantee identical characters.</p></article><article><span>02</span><h3>A clear resource budget</h3><p>WanGP needs a compatible GPU. No free cloud endpoint is included. A failed AI job never silently becomes a Blender video.</p></article><article><span>03</span><h3>Review before sharing</h3><p>Check every frame, model license and product claim. Daily production and YouTube uploads remain switched off.</p></article></section>
+  <footer><span>Made with imagination. Built with Blender & <a href="https://github.com/deepbeepmeep/WanGP" target="_blank" rel="noreferrer">WanGP</a>.</span><span>PERSONAL VIDEO STUDIO / PHASE 2</span></footer>
+</main>
+<dialog id="preview"><div class="modal-header"><strong id="preview-title">Pip & the giant strawberry</strong><button id="close-preview" aria-label="Close video">✕</button></div><video id="video" controls playsinline preload="metadata"></video><a class="button secondary" id="download">Download MP4 ↓</a></dialog>
+</body></html>

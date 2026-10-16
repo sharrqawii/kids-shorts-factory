@@ -1,0 +1,29 @@
+{
+  "blender": "4.2.23 LTS",
+  "objects": 224,
+  "frame": 127,
+  "root_position": [
+    -0.6299999952316284,
+    0.2199999988079071,
+    0.0
+  ],
+  "root_rotation": [
+    0.0,
+    -0.11999999731779099,
+    1.0499999523162842
+  ],
+  "keyframes_per_root_channel": [
+    240,
+    240,
+    240,
+    240,
+    240,
+    240,
+    240,
+    240,
+    240
+  ],
+  "cpu": "CPU",
+  "animation_frames": 240,
+  "animation_fps": 12
+}

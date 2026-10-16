@@ -1,0 +1,13 @@
+{
+  "engine": "Blender Cycles CPU",
+  "blender": "4.2.23 LTS",
+  "width": 1080,
+  "height": 1920,
+  "samples": 12,
+  "threads": 4,
+  "frames_done": 1,
+  "frame_seconds": [
+    116.48500000000058
+  ],
+  "elapsed_seconds": 129.09299999999985
+}

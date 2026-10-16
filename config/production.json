@@ -1,0 +1,12 @@
+{
+  "enabled": false,
+  "target_episodes_per_day": 5,
+  "timezone": "Asia/Amman",
+  "schedule_utc": null,
+  "max_parallel_renders": 1,
+  "per_episode_render_budget_seconds": 4500,
+  "require_new_story_id": true,
+  "require_implemented_recipe": true,
+  "require_verified_video": true,
+  "youtube_uploads_enabled": false
+}

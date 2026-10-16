@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-13",
+  "target": 5,
+  "automatic_execution": false,
+  "youtube_uploads": false,
+  "ready_for_batch_test": false,
+  "blockers": [
+    "Some original story concepts do not yet have implemented renderers"
+  ],
+  "jobs": [
+    {
+      "job_id": "cb3d02a37ad744a2e0ba",
+      "story_id": "001-giant-strawberry",
+      "title": "Pip & the BIG berry",
+      "renderer": "strawberry-v1",
+      "status": "ready_for_render_test",
+      "seed": 3409773219
+    },
+    {
+      "job_id": "9dd3b77baf27b41c45c9",
+      "story_id": "002-shy-bubble",
+      "title": "Pip and the shy bubble",
+      "renderer": null,
+      "status": "needs_renderer",
+      "seed": 2647897979
+    },
+    {
+      "job_id": "7732be9008119c302c9b",
+      "story_id": "003-sleepy-sunflower",
+      "title": "Pip wakes a sunflower",
+      "renderer": null,
+      "status": "needs_renderer",
+      "seed": 1999814288
+    },
+    {
+      "job_id": "a23f27e8043553251000",
+      "story_id": "004-puddle-friend",
+      "title": "Pip meets his puddle friend",
+      "renderer": null,
+      "status": "needs_renderer",
+      "seed": 2722047976
+    },
+    {
+      "job_id": "863a5f8f9800e6dd9b1d",
+      "story_id": "005-lost-firefly",
+      "title": "Pip and the lost little light",
+      "renderer": null,
+      "status": "needs_renderer",
+      "seed": 2251972495
+    }
+  ]
+}

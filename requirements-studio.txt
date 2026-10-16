@@ -1,0 +1,2 @@
+# Lightweight UI/controller only. Never install WanGP into this environment.
+Pillow==11.3.0

@@ -1,0 +1,16 @@
+{
+  "engine": "Blender Cycles CPU",
+  "blender": "4.2.23 LTS",
+  "width": 540,
+  "height": 960,
+  "samples": 4,
+  "threads": 4,
+  "denoising_prefilter": "FAST",
+  "denoising_quality": "BALANCED",
+  "denoising_gpu": false,
+  "frames_done": 1,
+  "frame_seconds": [
+    7.890999999999622
+  ],
+  "elapsed_seconds": 19.0
+}

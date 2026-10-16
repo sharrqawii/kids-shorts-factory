@@ -1,0 +1,50 @@
+{
+  "requested_mode": "fallback",
+  "smoke": false,
+  "duration": 20,
+  "animation_fps": 12,
+  "delivery_fps": 24,
+  "output_resolution": [
+    1080,
+    1920
+  ],
+  "fallback_reasons": [],
+  "audio": {
+    "sample_rate": 48000,
+    "channels": 2,
+    "duration": 20,
+    "peak_dbfs": -9.725829453590595,
+    "rms_dbfs": -28.72394603938345,
+    "source": "Original deterministic synthesis; assets licensed CC0-1.0"
+  },
+  "verification": {
+    "resolution": true,
+    "h264": true,
+    "yuv420p": true,
+    "duration": true,
+    "fps": true,
+    "frame_count": true,
+    "aac": true,
+    "stereo_48khz": true,
+    "audio_duration": true,
+    "full_decode": true
+  },
+  "actual_mode": "fallback",
+  "render_resolution": [
+    1080,
+    1920
+  ],
+  "note": "12 distinct animation poses per second, each held for two delivery frames. The fallback is a shaded 2.5D illustration, not full 3D geometry.",
+  "elapsed_seconds": 76.03099999999995,
+  "video_bytes": 921481,
+  "sha256": "8078b12398ea4fa80b05341ce62fc11c7b8b242cd20abbd8e079ce93155ea54e",
+  "environment": {
+    "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+    "platform": "win32",
+    "threads": 4
+  },
+  "inputs": {
+    "assets\\pip.json": "7dd88b5688b91c89775e6696ee79c75865871b762a27fea4f3b0c42f9460bc40",
+    "episodes\\strawberry.json": "7550fe4244cbf2cb573dbc900f758122f360ca02632c1eb051a6e8ee862834cb"
+  }
+}

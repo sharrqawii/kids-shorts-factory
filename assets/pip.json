@@ -1,0 +1,17 @@
+{
+  "id": "pip-capybara-v1",
+  "name": "Pip",
+  "description": "A baby capybara with a broad caramel muzzle, tiny ears, four stubby feet, mint neckerchief and a butter-yellow flower pin. No tail.",
+  "palette": {
+    "fur": "B97B48",
+    "muzzle": "E5B77B",
+    "ear": "DA9C7E",
+    "eye": "271F29",
+    "blush": "EF9699",
+    "scarf": "48BFA7",
+    "pin": "FFDB71"
+  },
+  "body_scale": [0.59, 0.50, 0.66],
+  "head_scale": [0.61, 0.53, 0.49],
+  "seed": 17
+}

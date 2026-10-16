@@ -1,0 +1,30 @@
+{
+  "engine": "WanGP",
+  "upstream_revision": "af2ed29a83dbccc7f1c0571a73005648436b392e",
+  "gpu": "NVIDIA RTX 4060 Ti 8 GB",
+  "cloud": false,
+  "state": "succeeded",
+  "elapsed_seconds": 354.88313460350037,
+  "settings": {
+    "workspace": "creator",
+    "engine": "wangp",
+    "prompt": "An original small glass sculpture on warm sandstone, sunlight, gentle slow camera movement.",
+    "model": "t2v_1.3B",
+    "mode": "text",
+    "resolution": "480x480",
+    "duration": 2,
+    "steps": 8,
+    "seed": 42,
+    "provider": "local",
+    "reference": "",
+    "negative_prompt": ""
+  },
+  "verification": {
+    "width": 480,
+    "height": 480,
+    "duration": 2.0625,
+    "codec": "h264",
+    "decode_passed": true,
+    "sha256": "a6c93c00d41e163ffa9ceb6ef66ed7d702ffd7aae648a542803d61847c6d1573"
+  }
+}

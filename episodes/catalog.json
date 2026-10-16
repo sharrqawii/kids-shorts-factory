@@ -1,0 +1,42 @@
+[
+  {
+    "id": "001-giant-strawberry",
+    "title": "Pip & the BIG berry",
+    "renderer": "strawberry-v1",
+    "implemented": true,
+    "story": "Pip discovers a giant strawberry, gives it a gentle boop, and hops with delight.",
+    "license": "CC0-1.0"
+  },
+  {
+    "id": "002-shy-bubble",
+    "title": "Pip and the shy bubble",
+    "renderer": null,
+    "implemented": false,
+    "story": "0-4s: A bubble drifts behind Pip. 4-8s: He turns and it hides behind a leaf. 8-13s: Pip sits quietly and holds out a paw. 13-17s: The bubble lands gently, reflecting a tiny rainbow. 17-20s: Pip waves as it floats safely away.",
+    "license": "CC0-1.0"
+  },
+  {
+    "id": "003-sleepy-sunflower",
+    "title": "Pip wakes a sunflower",
+    "renderer": null,
+    "implemented": false,
+    "story": "0-4s: Pip finds a drooping sunflower. 4-8s: He notices a little watering can. 8-13s: He tips a few sparkling drops onto the soil. 13-17s: The sunflower slowly lifts its head. 17-20s: Pip and the flower lean toward the sunshine together.",
+    "license": "CC0-1.0"
+  },
+  {
+    "id": "004-puddle-friend",
+    "title": "Pip meets his puddle friend",
+    "renderer": null,
+    "implemented": false,
+    "story": "0-4s: Pip spots a tiny puddle after rain. 4-8s: His reflection surprises him. 8-13s: He tilts left and right; his reflection follows. 13-17s: One gentle paw tap makes round ripples. 17-20s: The water settles and Pip smiles at his new friend.",
+    "license": "CC0-1.0"
+  },
+  {
+    "id": "005-lost-firefly",
+    "title": "Pip and the lost little light",
+    "renderer": null,
+    "implemented": false,
+    "story": "0-4s: At dusk, a softly glowing firefly circles Pip. 4-8s: Pip notices other lights beyond a leaf arch. 8-13s: He gently lifts the drooping leaf with his nose. 13-17s: The firefly rejoins its friends. 17-20s: Their steady warm glow lights Pip's happy face. No strobing.",
+    "license": "CC0-1.0"
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "id": "001-giant-strawberry",
+  "title": "Pip & the BIG berry",
+  "duration": 20,
+  "animation_fps": 12,
+  "delivery_fps": 24,
+  "width": 1080,
+  "height": 1920,
+  "seed": 17,
+  "beats": [
+    {"start": 0, "end": 4, "action": "Pip toddles into the garden."},
+    {"start": 4, "end": 8, "action": "A giant strawberry! Pip stops, blinks and tilts his head."},
+    {"start": 8, "end": 13, "action": "Pip leans closer and gently boops the berry. It wobbles."},
+    {"start": 13, "end": 17, "action": "The berry settles. Pip does two happy little hops."},
+    {"start": 17, "end": 20, "action": "Pip snuggles close. A little heart floats up."}
+  ]
+}
