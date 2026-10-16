@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-16",
+  "repository": "sharrqawii/kids-shorts-factory",
+  "commit": "a731a30bd25457f7408309fe4f160de0f4e6907f",
+  "run_url": "https://github.com/sharrqawii/kids-shorts-factory/actions/runs/38865655080",
+  "result": "success",
+  "tests": 39,
+  "unit_test_seconds": 4.324,
+  "blender_smoke_frames": 24,
+  "full_decode": true,
+  "cloud_gpu_tested": false
+}
